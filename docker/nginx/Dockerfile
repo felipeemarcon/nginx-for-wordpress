@@ -33,4 +33,10 @@ RUN apk add php81-curl
 RUN apk add php81-iconv
 RUN apk add php81-zip
 RUN apk add php81-gd
-RUN apk add php81-fpm
+RUN apk add php81-xml
+RUN apk add php81-exif
+RUN apk add php81-fileinfo
+RUN apk add php81-pecl-imagick
+RUN apk add php81-intl
+RUN apk add php81-simplexml
+RUN apk add php81-session

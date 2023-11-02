@@ -7,9 +7,11 @@ if [ ! -d "/app/www/wordpress" ]; then
   fi
   echo "Downloading Wordpress..."
   cd /app/www/
-  wget https://wordpress.org/wordpress-6.0.2.tar.gz
-  tar -xvzf wordpress-6.0.2.tar.gz
-  chown -R nginx:nginx /app/www/wordpress && chmod -R 775 /app/www/wordpress
+  wget https://wordpress.org/wordpress-6.3.1.tar.gz
+  tar -xvzf wordpress-6.3.1.tar.gz
+  cp -R /app/config/wordpress/wp-config.php /app/www/wordpress/
+  chown -R www-data:www-data /app/www/wordpress/ && chmod -R 775 /app/www/wordpress/
+  rm -rf /app/.git
   echo "Wordpress created"
 else
   echo "Wordpress OK"
